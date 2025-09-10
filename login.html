@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Missão EPI: Segurança em Jogo</title>
+    <link rel="stylesheet" href="css/teste.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="icon" href="css/img/icon.png">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1>🎮 MISSÃO EPI 🎮</h1>
+            <div class="game-stats">
+                <div class="stat">❤️ Vidas: <span id="lives"></span></div>
+                <div class="stat">⭐ Pontos: <span id="score">0</span></div>
+                <div class="stat">📊 Nível: <span id="level">1</span></div>
+            </div>
+        </div>
+        
+        <!-- Tela de Menu -->
+        <div class="menu-screen animate__fadeOutUp" id="menuScreen">
+            <h2>⚡ SEGURANÇA EM JOGO ⚡</h2>
+            <p style="color: #fff; font-size: 12px; margin-bottom: 30px; line-height: 1.8;">
+                Aprenda sobre segurança do trabalho<br>
+                selecionando os EPIs corretos!
+            </p>
+            <div class="usuario">
+                <input type="text" id="usuario" placeholder="Insira seu usuário">
+                <input type="password" id="senha" placeholder="Insira sua senha">
+            </div> 
+            <div>
+                <button class="menu-button" onclick="entrar()">INICIAR JOGO</button>
+                <button class="menu-button" onclick="showInstructions()">INSTRUÇÕES</button>
+            </div>
+        </div>
+        
+        <!-- Tela de Jogo -->
+        <div class="game-screen" id="gameScreen">
+            <button class="reiniciar" onclick="startGame()">Reinicair</button>
+            <div class="challenge-area">
+                <div class="challenge-image">
+                    <div class="worker-sprite"></div>
+                    <div class="electrical-panel">
+                        <div class="circuit-breaker"></div>
+                        <div class="circuit-breaker"></div>
+                        <div class="circuit-breaker"></div>
+                        <div class="circuit-breaker"></div>
+                        <div class="circuit-breaker"></div>
+                        <div class="circuit-breaker"></div>
+                        <div class="circuit-breaker"></div>
+                        <div class="circuit-breaker"></div>
+                        <div class="circuit-breaker"></div>
+                        <div class="circuit-breaker"></div>
+                        <div class="circuit-breaker"></div>
+                        <div class="circuit-breaker"></div>
+                    </div>
+                </div>
+                <div class="challenge-text" id="challengeText">
+                    Você precisa substituir um disjuntor neste painel. Quais EPIs são essenciais?
+                </div>
+            </div>
+            
+            <div class="epi-selection">
+                <div class="epi-cards" id="epiCards">
+                    <!-- Cards serão inseridos via JavaScript -->
+                </div>
+                <div class="action-buttons">
+                    <button class="confirm-button" id="confirmButton" onclick="checkAnswer()">
+                        CONFIRMAR SELEÇÃO
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Overlay de Resultado -->
+    <div class="result-overlay" id="resultOverlay">
+        <div id="resultContent"></div>
+    </div>
+    
+    <script src="js/teste.js"></script>
+</body>
+</html>
