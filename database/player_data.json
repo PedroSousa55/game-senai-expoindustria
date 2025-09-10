@@ -1,17 +1,12 @@
 [
   {
     "username": "Pedro",
-    "score": 0,
-    "rank": "Novato"
-  },
-  {
-    "username": "lucas",
-    "score": 0,
-    "rank": "Novato"
-  },
-  {
-    "username": "pedro",
     "score": 150,
+    "rank": "Novato"
+  },
+  {
+    "username": "kalil",
+    "score": 250,
     "rank": "Novato"
   }
 ]

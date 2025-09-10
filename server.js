@@ -100,7 +100,7 @@ app.post('/save-score', (req, res) => {
 
             if (score > 1500) {
                 players[playerIndex].rank = 'Mestre da Segurança';
-            } else if (score > 1000) {
+            } else if (score > 1200) {
                 players[playerIndex].rank = 'Experiente';
             } else if (score > 500) {
                 players[playerIndex].rank = 'Aprendiz';

@@ -122,17 +122,8 @@ const challenges = [
         correctEpis: ['EPI_CAPACETE_B', 'EPI_OCULOS', 'EPI_CINTO', 'EPI_BOTINA_ISOLANTE'],
         successMessage: 'Ótimo! Você se protegeu contra queda e objetos soltos.',
         failMessage: 'Nunca esqueça o cinto de segurança em altura!',
-        points: 140
-    },
-    {
-        id: 'ELET_013',
-        text: 'Mistura de tintas e solventes em oficina. Quais EPIs devem ser usados?',
-        correctEpis: ['EPI_RESPIRADOR', 'EPI_OCULOS', 'EPI_LUVA_ISOLANTE', 'EPI_MASCARA'],
-        successMessage: 'Correto! Você se protegeu contra vapores e respingos químicos.',
-        failMessage: 'Máscara e respirador são indispensáveis nesse tipo de atividade.',
         points: 150
-    },
-
+    }
 ];
 
 let loggedInUser = null;
@@ -198,7 +189,6 @@ async function handleRegister() {
 async function saveScore() {
     if (!loggedInUser) {
         console.log("Nenhum usuário logado para salvar a pontuação.");
-        return;
     }
     try {
         await fetch('http://localhost:3000/save-score', {
@@ -332,6 +322,7 @@ function arraysEqual(a, b) {
 function showSuccess(challenge) {
     gameState.score += challenge.points;
     updateStats();
+
 
     const overlay = document.getElementById('resultOverlay');
     const content = document.getElementById('resultContent');
